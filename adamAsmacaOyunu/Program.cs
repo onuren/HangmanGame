@@ -1,9 +1,6 @@
 ﻿
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace adamAsmacaOyunu
 {
@@ -11,6 +8,7 @@ namespace adamAsmacaOyunu
     {
         static void Main(string[] args)
         {
+
             islemler a = new islemler();
             a.baslangic();
             a.kelimeDizi = new List<char>();
@@ -75,7 +73,8 @@ namespace adamAsmacaOyunu
                     if (!(a.gecici.Contains('_')))
                     {
                         Console.WriteLine("Tebrikler kelimeyi buldunuz!");
-                        Console.WriteLine();
+                        Console.Beep(1000, 200);
+                        Console.Beep(2000, 500);
                         break;
                     }
                 }
@@ -91,6 +90,8 @@ namespace adamAsmacaOyunu
             if (a.gecici.Contains('_'))
             {
                 Console.WriteLine("Malesef tahmin hakkınız doldu. \nOyunu kaybettiniz.");
+                Console.Beep(2000, 200);
+                Console.Beep(1000, 500);
             }
         }
     }
